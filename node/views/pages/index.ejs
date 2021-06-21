@@ -1,0 +1,27 @@
+<html>
+<head>
+    <title>URL Shortener</title>
+    <link>
+</head>
+<body>
+    <h1>URL Shortener</h1>
+    <div>
+        <input type="text" id="url">
+        <button onclick="create()" id="submit">Shorten</button>
+        <p><a id="result"></a></p>
+    </div>
+
+    <div id="previous">
+        <h2>Recent</h2>
+        <ul id="previouslist">
+        <% previous.forEach(function(p) { %>
+            <li><a href="<%=p.url%>">/<%= p.uid %></a> -- <%=p.url%></li>
+        <% }); %>
+        </ul>
+    </div>
+
+    <script src="js/cookies.js"></script>
+    <script src="js/communication.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

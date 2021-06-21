@@ -1,0 +1,38 @@
+# name: Bestwebsite CI
+
+# on:
+#   push
+
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+
+#     strategy:
+#       matrix:
+#         node-version: [14.x]
+
+#     steps:
+#     - uses: actions/checkout@v2
+#     - name: Use Node.js ${{ matrix.node-version }}
+#       uses: actions/setup-node@v2
+#       with:
+#         node-version: ${{ matrix.node-version }}
+        
+#     - run: npm install
+
+#     - run: npm test  # TODO run linter on all js files, browser and node
+
+#     # TODO actual tests - try calling endpoints?
+
+#   deploy:
+#     runs-on: ubuntu-latest
+#     needs: build
+#     if: github.ref == 'refs/heads/master'
+    
+#     steps:
+#       - uses: actions/checkout@v2
+#       - uses: akhileshns/heroku-deploy@v3.12.12
+#         with:
+#           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+#           heroku_app_name: "glacial-everglades-12274"
+#           heroku_email: "naslundx@gmail.com"

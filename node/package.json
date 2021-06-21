@@ -1,0 +1,30 @@
+{
+  "name": "urlshortener",
+  "version": "0.0.1",
+  "description": "URL Shortener webapp in Node",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "jshint . --exclude node_modules/,public/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/naslundx/urlshorteners.git"
+  },
+  "author": "Marcus Näslund",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/naslundx/urlshorteners/issues"
+  },
+  "homepage": "https://github.com/naslundx/urlshorteners#readme",
+  "dependencies": {
+    "cookie-parser": "^1.4.5",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-validator": "^6.11.1",
+    "jshint": "^2.13.0"
+  },
+  "engines": {
+    "node": "14.x"
+  }
+}
